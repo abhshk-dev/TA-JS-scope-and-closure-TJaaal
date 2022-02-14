@@ -25,7 +25,7 @@ console.log(numA + numB); //51
 Find the output of the code snippets below:
 
 ```js
-console.log(sayHello()); // OUTPUT
+console.log(sayHello()); // Hello
 function sayHello() {
   console.log("Hey");
 }
@@ -38,7 +38,7 @@ Find the output of the code snippets below:
 
 ```js
 let username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello(); // Tyrion
 function sayHello() {
   console.log(username);
 }
@@ -47,7 +47,7 @@ function sayHello() {
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // OUTPUT
+sayHello(); // unsername is not defined
 let username = "Tyrion";
 function sayHello() {
   console.log(username);
@@ -58,7 +58,7 @@ Find the output of the code snippets below:
 
 ```js
 let username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello(); // sayHello() is not defined
 let sayHello = () => {
   console.log(username);
 };
@@ -67,7 +67,7 @@ let sayHello = () => {
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // OUTPUT
+sayHello(); // sayHello() is not defined
 let username = "Tyrion";
 let sayHello = () => {
   console.log(username);
@@ -77,7 +77,7 @@ let sayHello = () => {
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // OUTPUT
+sayHello(); // sayHello() is not defined
 var username = "Tyrion";
 let sayHello = () => {
   console.log(username);
@@ -88,7 +88,7 @@ Find the output of the code snippets below:
 
 ```js
 var username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello(); // sayHello() is not defined
 let sayHello = () => {
   console.log(username);
 };
