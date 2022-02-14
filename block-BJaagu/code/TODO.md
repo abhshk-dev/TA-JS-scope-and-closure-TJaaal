@@ -102,7 +102,7 @@ let sayHello = () => {
   console.log(username);
   var username = "John";
 };
-sayHello(); // OUTPUT
+sayHello(); // undefined
 ```
 
 Find the output of the code snippets below:
@@ -113,7 +113,7 @@ let sayHello = () => {
   var username = "John";
   console.log(username);
 };
-sayHello(); // OUTPUT
+sayHello(); // John
 ```
 
 Find the output of the code snippets below:
@@ -124,5 +124,5 @@ let sayHello = () => {
   console.log(username);
   let username = "John";
 };
-sayHello(); // OUTPUT
+sayHello(); // Cannot acces username before initialization.
 ```
