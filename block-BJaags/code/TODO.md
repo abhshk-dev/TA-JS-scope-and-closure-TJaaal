@@ -13,6 +13,18 @@ function square(num) {
 }
 let hundred = square(10);
 console.log(hundred);
+
+
+let num;
+function square(num){
+  return num*num;
+}
+let hundred;
+
+num=21;
+
+hundred=square(10);
+
 ```
 
 Create the execution context diagram of the following code line by line.
