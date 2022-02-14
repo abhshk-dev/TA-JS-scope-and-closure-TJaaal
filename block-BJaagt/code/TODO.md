@@ -6,7 +6,7 @@ Example:
 function hello() {
   var username = 'Arya';
 }
-console.log(useranme); // Reference error
+console.log(username); // Reference error
 ```
 
 In above code we are looking for the variable named `usename`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
@@ -19,7 +19,7 @@ The above code will throw an error `Reference Error username is not defined`.
 {
   const username = 'Arya';
 }
-console.log(useranme); // Reference Error username is not defined.
+console.log(username); // Reference Error username is not defined.
 ```
 The username variable is defined in the block scope so, It cannot be accessed.
 
@@ -29,7 +29,7 @@ The username variable is defined in the block scope so, It cannot be accessed.
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); //  Reference Error username is not defined.
+console.log(username); // Reference Error username is not defined.
 ```
 
 4. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -38,7 +38,7 @@ console.log(useranme); //  Reference Error username is not defined.
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); // Reference Error username is not defined.
+console.log(username); // Arya
 ```
 
 5. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -48,7 +48,7 @@ let username = 'John';
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); // Identifier username has already been declared.
+console.log(username); // Identifier username has already been declared.
 ```
 
 6. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -58,8 +58,9 @@ let username = 'John';
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); // output
+console.log(username); // John
 ```
+let creates a block scope. so the global variable username with value John will be logged in the console.
 
 7. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
@@ -69,7 +70,7 @@ function sayHello() {
   let username = 'Arya';
 }
 sayHello();
-console.log(useranme); // output
+console.log(username); // John
 ```
 
 8. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -85,7 +86,7 @@ console.log(i, 'Second'); // output
 
 ```js
 for (let i = 0; i < 10; i++) {
-  console.log(i, 'First'); // output
+  console.log(i, 'First'); // 0-9 , First.
 }
-console.log(i, 'Second'); // output
+console.log(i, 'Second'); // i is not defined
 ```
