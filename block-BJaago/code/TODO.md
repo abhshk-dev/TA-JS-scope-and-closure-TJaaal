@@ -1,7 +1,6 @@
 Create a execution context diagram of the following code on your notebook. Take a screenshot/photo and store it in the folder named `img`. Use `![](./img/image-name.png)` to display it here.
 
 - Take in account the different phases of execution, different execution contexts
-
 1.
 
 ```js
