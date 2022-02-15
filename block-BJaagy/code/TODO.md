@@ -11,13 +11,14 @@
   ```
 2. Create a function by your choice that returns a function reference.
   ```js
-  function ref(cb){
-    return cb;
+  function ref(){
+      function add(n){
+    return n+1;}
+    return add;
   }
-  function add(n){
-    return n+1;
-  }
-  ref(add);
+
+  
+  ref();
   ```
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
@@ -73,7 +74,9 @@ console.log(alphabet); //prints 'abcd'
 function filter(arr,cb){
   let final=[];
   for(let elm of arr){
-    final.push(cb(elm));
+    if(cb(elm)){
+       final.push(elm);
+    }
   }
   return final;
 }
