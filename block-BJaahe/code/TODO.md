@@ -4,19 +4,35 @@
 
 ```js
 // Your code goes here
+function outer(){
+  var sayHello= (str)=>{
+   return alert(str);
+  }
+  sayHello('Hello');
+}
+
 ```
 
 2. Write a function `delay` that accepts two arguments, a callback and the wait for the time in milliseconds (1000 ms is 1 second). `delay` should return a function that, when invoked waits for the specified amount of time before executing. (Use setTimeout)
 
 ```js
 // Your code goes here
+
+ function delay(wait,cb){
+   return ()=>{
+     
+   }
+ }
 ```
 
 3. Write a function with a closure. The first function should only take one argument, someone's last name, and return the inner function. The returned `inner` function should take one more argument, someone's first name. When inner function when called it should console.log both the first name and the last name with a space.
 
 ```js
-function lastName() {
+function lastName(lName) {
   //  Your code goes here
+  return function inner(fName){
+    console.log(`${fName} ${lName}`);
+  }
 }
 
 let lastNameLee = lastName('lee'); // logs nothing
@@ -35,6 +51,11 @@ lastNameLee('Lynne'); //logs 'Lynne Lee'
 ```js
 function storyWriter() {
   // Your code goes here
+  const str="";
+  return {
+    addWords: (story) => { return str+=story;}
+    erase: ()=>{return addWords('');}
+  };
 }
 
 // Test
