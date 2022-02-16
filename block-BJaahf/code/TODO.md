@@ -10,9 +10,19 @@
 **You can use normal for loop for this function**
 
 ```js
-function loop() {
+function loop(initial,cbTest,cbUpdate,cbBody) {
   // Your code goes here
+  let i=initial;
+   if(cbTest(i)==true){
+     return cbBody();
+      cbUpdate(i);
+   }
 }
+
+/*--
+for(let i=3;i>0;i-1){
+    console.log(i);
+  }*/
 
 loop(
   3,
