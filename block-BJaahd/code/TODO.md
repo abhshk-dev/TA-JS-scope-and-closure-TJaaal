@@ -19,14 +19,14 @@ function getCounter() {
   };
 };
 
-let counter = getCounter()
+let counter = getCounter();
 
-counter.value();  // output
-counter.increment(); // output
-counter.increment(); // output
-counter.value(); // output
-counter.decrement(); // output
-counter.value(); // output
+counter.value();  // 0
+counter.increment(); // undefined
+counter.increment(); // undefined
+counter.value(); // 1
+counter.decrement(); // undefined
+counter.value(); // 1
 ```
 
 2. Create the execution context diagram and write the output.
