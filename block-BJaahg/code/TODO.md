@@ -13,7 +13,7 @@ console.log(
   window.firstName,
   window.lastName,
   window.knownAs
-);
+); // unefined undefined 'no one'
 ```
 
 2. Guess the output:
@@ -27,40 +27,41 @@ function fullName(a, b) {
   return a + b;
 }
 
-console.log(window.fullName(firstName, lastName));
+console.log(window.fullName(firstName, lastName));//"AryaStark"
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
 var one = addOne(0);
 var two = addOne(1);
-console.log(one, two);
+console.log(one, two); // 1 2
+
 ```
 
 4. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
 var one = addOne(0);
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(one, two);
+console.log(one, two); // 1 2
 ```
 
 5. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
-console.log(addOne(0));
-fucntion addOne(num){
+console.log(addOne(0));//1
+function addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(two);
+console.log(two);//2
 ```
 
 6. Make a Execution Context Diagram for the following JS and write the output.
@@ -71,7 +72,7 @@ const addOne = (num) => {
   return num + 1;
 };
 var two = addOne(1);
-console.log(two);
+console.log(two); // addOne is not defined
 ```
 
 7. Make a Execution Context Diagram for the following JS and write the output.
@@ -82,7 +83,7 @@ const addOne = (num) => {
   return num + 1;
 };
 var two = addOne(1);
-console.log(two);
+console.log(two); // addOne is not defined
 ```
 
 8. What will be the output of the following
@@ -95,7 +96,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); //undefined
 ```
 
 9. What will be the output of the following
@@ -108,7 +109,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome();//true
 ```
 
 10. What will be the output of the following
@@ -121,7 +122,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // undefined
 ```
 
 11. What will be the output of the following
@@ -135,7 +136,7 @@ function fullName(a, b) {
   return a + b;
 }
 const name = fullName(firstName, lastName);
-console.log(name);
+console.log(name); // AryaStark
 ```
 
 12. Guess the output of the code below with a reason.
@@ -146,7 +147,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);
+console.log(name);//name is not defined.
 ```
 
 13. Guess the output of the code below with a reason.
