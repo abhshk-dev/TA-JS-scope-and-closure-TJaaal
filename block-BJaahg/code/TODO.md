@@ -147,7 +147,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);//name is not defined.
+console.log(name);// There will be no output because when variables are declared using let keyword the variables are left empty or not initialized.
 ```
 
 13. Guess the output of the code below with a reason.
@@ -156,7 +156,7 @@ console.log(name);//name is not defined.
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); //Arya Stark
 ```
 
 14. Guess the output of the code below with a reason.
@@ -165,7 +165,7 @@ console.log(name);
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); // name is not defined.
 ```
 
 15. Guess the output of the code below with a reason.
@@ -174,7 +174,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // 20 , var is being used to declare the variable i inside for loop.
 ```
 
 16. Guess the output of the code below with a reason.
@@ -183,7 +183,7 @@ console.log(i);
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // i is not defined , because let is being used to declare the variable i which creates a Block Scope.
 ```
 
 17. Guess the output and the reason behind that.
@@ -195,8 +195,8 @@ function sample() {
   }
   console.log(username);
 }
-sample();
-```
+sample();// John Snow , var creates a function scope.
+``` 
 
 18. Guess the output and the reason behind that.
 
@@ -207,7 +207,7 @@ function sample() {
   }
   console.log(username);
 }
-sample();
+sample();//Error message: username is not defined. let creates a block scope.
 ```
 
 19. Guess the output and the reason behind that.
@@ -221,7 +221,9 @@ function sample() {
   }
   console.log(username, 'second');
 }
-sample();
+sample();// John Snow 
+         // John Snow second
+         //  
 ```
 
 20. Guess the output and the reason behind that.
@@ -235,7 +237,8 @@ function sample() {
   }
   console.log(username, 'second');
 }
-sample();
+sample(); // John Snow first
+          // Arya Stark second
 ```
 
 21. Guess the output and the reason behind that.
@@ -249,6 +252,7 @@ function sample(...args) {
 }
 
 sample('First', 'Second', 'Third');
+// Hello I am First Second Third
 ```
 
 22. Guess the output and the reason behind that.
@@ -262,6 +266,9 @@ function sample(...args) {
 }
 
 sample('First', 'Second', 'Third');
+// Hello I am First
+// VM277:4 Hello I am Second
+// VM277:4 Hello I am Third
 ```
 
 23. Guess the output and the reason behind that.
@@ -275,6 +282,7 @@ if (true) {
   let username = 'Hello World!';
   myFunc();
 }
+// cannot access username
 ```
 
 24. Guess the output and the reason behind that.
@@ -291,6 +299,7 @@ function outer() {
 }
 
 outer();
+// I love this movie called MAD MAX: FURY ROAD
 ```
 
 25. Guess the output and the reason behind that.
@@ -308,6 +317,7 @@ function outer() {
 }
 
 outer();
+// I love this movie called BEFORE SUNRISE. 
 ```
 
 26. Guess the output and the reason behind that.
@@ -328,6 +338,7 @@ function outer() {
   inner();
 }
 outer();
+//I love this movie called GONE GIRL
 ```
 
 30. Using reduce find the final value when the initial value passed is `100`. You have to pass the output of one function into the input of next function in the array `allFunctions` starts with `addOne` ends with `half`.
@@ -355,5 +366,8 @@ let allFunctions = [
   half,
 ];
 
+allFunctions.reduce((acc,cv)=>{
+  return cv(acc)
+},100);
 // Answer is: 447
 ```
