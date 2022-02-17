@@ -7,17 +7,21 @@ For Example:
 1.
 
 ```js
-var username = 'Arya';
-let brothers = ['John', 'Ryan', 'Bran'];
-
-console.log(username, brothers[0]);
+var username = undefined;
+let brothers ;
+let message ;
+var nextMessage=undefined;
 
 function sayHello(name) {
   return `Hello ${name}`;
 }
+ username='Arya';
+ brothers= ['John', 'Ryan', 'Bran'];
 
-let message = sayHello(username);
-var nextMessage = sayHello('Test');
+ console.log(username, brothers[0]);
+ 
+ message = sayHello(username);
+ nextMessage= sayHello('Test');
 ```
 
 <!-- Answer -->
@@ -65,6 +69,25 @@ var nextMessage = sayHello('Test');
 
 ```js
 // Your code goes here
+
+/* Declaration phase */
+var username=undefined;
+let number;
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+let message;
+var nextMessage=undefined;
+
+/*---Execution phase---*/
+
+username='Arya';
+
+number=21;
+message= sayHello(username);
+nextMessage = sayHello('Test');
+
 ```
 
 3.
@@ -86,6 +109,25 @@ var nextMessage = sayHello('Test');
 
 ```js
 // Your code goes here
+// Code will not run. Error username not defined.
+/*---Declaration Phase--*/
+
+let username;
+let number;
+let sayHello;
+let message;
+var nextMessage=undefined;
+
+/*----Execution Phase---*/
+
+console.log(username,numbers);
+username = 'Arya';
+number = 21;
+sayHello = function (name) {
+  return `Hello ${name}`;
+};
+message = sayHello(username);
+nextMessage = sayHello('Test');
 ```
 
 4.
@@ -108,6 +150,9 @@ var nextMessage = sayHello('Test');
 
 ```js
 // Your code goes here
+//code will not run. Error message: numbers is not defined.
+/*----Declaration phase---*/
+
 ```
 
 5.
@@ -123,6 +168,13 @@ let age = 21;
 
 ```js
 // Your code goes here
+/* Declaration phase */
+var name=undefined;
+let age;
+
+/*----Execution phase----*/
+// Error message: age is not defined.
+
 ```
 
 6.
@@ -142,6 +194,17 @@ sayHi();
 
 ```js
 // Your code goes here
+
+/*---Declaration phase---*/
+function sayHi(name) {
+  console.log(name);
+  console.log(age);
+  var name = 'Lydia';
+  let age = 21;
+}
+/*---Execution phase--*/
+sayHi();
+// Error message: cannot access age before initialization;
 ```
 
 7.
@@ -160,6 +223,18 @@ function sayHi(name) {
 
 ```js
 // Your code goes here
+
+/*--Declaration phase---*/
+
+function sayHi(name) {
+  console.log(name);
+  console.log(age);
+  var name = 'Lydia';
+  let age = 21;
+}
+/*--Execution phase--*/
+sayHi();
+//Error message:Error message: cannot access age before initialization;
 ```
 
 8.
@@ -178,6 +253,14 @@ let sayHi = function sayHi(name) {
 
 ```js
 // Your code goes here
+
+/*--Declaration phase---*/
+
+let sayHi; 
+
+/*--Execution phase--*/
+//ErrorMessage: sayHi() is not defined
+sayHi();
 ```
 
 9.
