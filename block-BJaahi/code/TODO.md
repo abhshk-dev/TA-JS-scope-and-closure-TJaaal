@@ -276,6 +276,15 @@ let num2 = 30;
 
 ```js
 // Your code goes here
+
+/*--Declaration phase---*/
+let num1;
+var sum=undefined;
+let num2;
+/*--Execution phase--*/
+num1=21;
+console.log(sum);//undefined
+sum=21+ // num2 is not defined.
 ```
 
 10.
@@ -300,6 +309,20 @@ let sum = add(num1, num2, 4, 5, 6);
 
 ```js
 // Your code goes here
+
+/* Declaration phase */
+var num1=undefined;
+let sum2;
+let add;
+function addAgian(a, b) {
+  return a + b;
+}
+let num2;
+let sum;
+
+/* Execution Phase */
+num1 = 21;
+sum2 = addAgain(num1, num2, 4, 5, 6); // addAgain is not defined
 ```
 
 11.
@@ -321,6 +344,20 @@ let add = (a, b) => {
 
 ```js
 // Your code goes here
+
+/*----Declaration phase ----*/
+
+function test(a) {
+  let num1 = 21;
+  return add(a, num1);
+}
+let sum;
+let add;
+
+/*----Execution phase ----*/
+sum=test(100);
+// add is not defined.
+
 ```
 
 12.
