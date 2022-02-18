@@ -2,8 +2,11 @@
 
 ```js
 function once(cb) {
+  let isCalled=false;
   return () =>{
-    return alert('You can only call me once!');
+    if(!isCalled)
+     cb();
+     isCalled=true;
   }
 }
 
@@ -19,8 +22,16 @@ log(); // return undefined (can't be called twice)
 2. Change the above function in such a way that the function accepts two parameter a callback function and parameter for the callback function. When calling the function pass the parameters.
 
 ```js
-function once(cb) {
+function once(cb,param) {
   // your code goes here
+  let isCalled=false;
+  return () =>{
+    if(!isCalled)
+     cb(param);
+     isCalled=true;
+  }else{
+    alert(`You can't call the function again!!`);
+  }
 }
 
 // TEST
@@ -36,8 +47,16 @@ log(); // return undefinde (can't be called twice)
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 
 ```js
-function once(cb) {
+function once(cb,...rest) {
   // your code goes here
+  let isCalled=false;
+  return () =>{
+    if(!isCalled)
+     cb(...rest);
+     isCalled=true;
+  }else{
+    alert(`You can't call the function again!!`);
+  }
 }
 
 // TEST
